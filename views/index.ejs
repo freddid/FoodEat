@@ -1,13 +1,72 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/styles/style.css">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/reset.css" />
+    <link rel="stylesheet" href="/css/style.css" />
     <title>Document</title>
 </head>
+
+<script
+    src="https://cdn.jsdelivr.net/gh/aframevr/aframe@1c2407b26c61958baa93967b5412487cd94b290b/dist/aframe-master.min.js"></script>
+<script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
+
 <body>
-    <h1>приложение</h1>
+    <div class="menu">
+        <div class="menu__burger">
+            ≡
+        </div>
+        <div class="menu__aside">
+            <div class="login">
+                <h2>Войдите в аккаунт</h2>
+                <input type="text" placeholder="Введите login" />
+                <input type="password" placeholder="Введите пароль" />
+                <button class="send-form">войти</button>
+            </div>
+            <div class="user">
+                <div class="user__header">
+                    <div class="user__info">
+                        <div class="user__img">
+                            <img src="/img-icon/empty-ava.png" alt="" />
+                        </div>
+                        <div class="user__name">Daud</div>
+                    </div>
+                    <div class="user__logout">
+                        выйти
+                    </div>
+                </div>
+
+                <div class="user__books"></div>
+            </div>
+        </div>
+    </div>
+    <div class="book-card">
+        <div class="wrapper">
+            <div class="btns">
+                <div class="btn btn-1">Описание</div>
+                <div class="btn btn-2">Отзывы</div>
+                <div class="btn btn-3">Характеристика</div>
+                <div class="btn close">✕</div>
+            </div>
+            <div class="descriptions">
+                <div class="description description-1"></div>
+                <div class="description description-2">
+                    <div class="comms-block"></div>
+                    <div class="add-commit">
+                        <input type="text" placeholder="Оставьте отзыв" />
+                        <button>Отправить</button>
+                    </div>
+                </div>
+                <div class="description description-3"></div>
+            </div>
+        </div>
+    </div>
+    <a-scene class="scene" vr-mode-ui="enabled: false;" arjs> </a-scene>
 </body>
+<script src="/js/jquery-min.js"></script>
+<script src="/js/script.js"></script>
+
 </html>
